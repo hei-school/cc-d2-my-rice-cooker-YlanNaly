@@ -16,7 +16,7 @@ Clone the repository:
 git clone https://github.com/your_username/rice-cooker-algorithm.git
 ```
 
-Features:
+## Features:
 
     Power control (on/off)
     Selection of cooking functions (steaming, boiling, stewing, potting, simmering)
@@ -24,6 +24,6 @@ Features:
     Keeping food warm functionality
     Stopping warm function
 
-Bugs:
+## Bugs:
 
 No known bugs at the moment.
