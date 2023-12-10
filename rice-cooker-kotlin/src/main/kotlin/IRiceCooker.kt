@@ -1,8 +1,12 @@
 interface IRiceCooker {
     fun cook(minutes: String)
     fun boil(minutes: String)
-    fun powerOn(power: Boolean)
-    fun powerOff(power: Boolean)
-    fun keepWarm(status: Boolean)
-    fun stopWarm(status: Boolean)
+    fun powerOn()
+    fun powerOff()
+    fun keepWarm()
+    fun stopWarm()
+    fun getStatus(): String
+    fun addWater(liters: Int)
+    fun addRice(grams: Int)
+    fun isCooking(): Boolean
 }
