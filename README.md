@@ -9,7 +9,7 @@ This repository contains an algorithm for a virtual representation of a rice coo
     - [RUST branch](link_to_RUST_branch_readme)
     - [Typescript branch](link_to_Typescript_branch_readme)
     - [Scala branch](link_to_Scala_branch_readme)
-    - [Kotlin branch]([link_to_Kotlin_branch_readme](https://github.com/hei-school/cc-d2-my-rice-cooker-YlanNaly/tree/feature/kotlin))
+    - [Kotlin branch](https://github.com/hei-school/cc-d2-my-rice-cooker-YlanNaly/tree/feature/kotlin)
 
 Clone the repository:
 ```bash
