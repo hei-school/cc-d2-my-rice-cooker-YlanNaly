@@ -1,28 +1,75 @@
 import java.util.Scanner
 
 fun main() {
+    val riceCooker = RiceCookerModel()
     val scanner = Scanner(System.`in`)
+
     while (true) {
+        println("État actuel : ${riceCooker.getStatus()}")
         menu()
-        when (scanner.nextInt()) {
-            1 -> println("Chauffer l'eau")
-            2 -> println("Ajouter du riz")
-            3 -> println("Commencer à cuire le riz")
-            4 -> {
-                println("Programme terminé")
-                return
+        val choice = scanner.nextInt()
+        try {
+            when (choice) {
+                1 -> riceCooker.powerOn()
+                2 -> riceCooker.powerOff()
+                3 -> riceCooker.keepWarm()
+                4 -> riceCooker.stopWarm()
+                5 -> {
+                    if (!riceCooker.isPowerOn) {
+                        println("Veuillez allumer le cuiseur de riz d'abord.")
+                    } else {
+                        println("Entrez les grammes de riz à ajouter :")
+                        val riceToAdd = scanner.nextInt()
+                        riceCooker.addRice(riceToAdd)
+                    }
+                }
+                6 -> {
+                    if (!riceCooker.isPowerOn) {
+                        println("Veuillez allumer le cuiseur de riz d'abord.")
+                    } else {
+                        println("Entrez les litres d'eau à ajouter :")
+                        val waterToAdd = scanner.nextInt()
+                        riceCooker.addWater(waterToAdd)
+                    }
+                }
+                7 -> {
+                    if (!riceCooker.isPowerOn) {
+                        println("Veuillez allumer le cuiseur de riz d'abord.")
+                    } else {
+                        riceCooker.boil("10")
+                    }
+                }
+                8 -> {
+                    if (!riceCooker.isPowerOn) {
+                        println("Veuillez allumer le cuiseur de riz d'abord.")
+                    } else {
+                        riceCooker.cook("15")
+                    }
+                }
+                9 -> {
+                    println("Programme terminé")
+                    return
+                }
+                else -> println("Entrée invalide. Veuillez entrer une option valide.")
             }
-            else -> println("Entrée invalide")
+        } catch (e: Exception) {
+            println("Format d'entrée invalide. Veuillez entrer une option valide.")
+            scanner.nextLine()
         }
     }
 }
 
 fun menu() {
     println(
-        "Rice Cooker Programme, voici les fonctionnalités : \n" +
-                "1. Chauffer l'eau\n" +
-                "2. Ajouter du riz\n" +
-                "3. Commencer à cuire le riz\n" +
-                "4. Éteindre"
+        "Programme du cuiseur de riz, voici les fonctionnalités : \n" +
+            "1. Allumer\n" +
+            "2. Éteindre\n" +
+            "3. Garder au chaud\n" +
+            "4. Arrêter de maintenir au chaud\n" +
+            "5. Ajouter du riz\n" +
+            "6. Ajouter de l'eau\n" +
+            "7. Ébullition\n" +
+            "8. Cuisson\n" +
+            "9. Éteindre",
     )
 }
