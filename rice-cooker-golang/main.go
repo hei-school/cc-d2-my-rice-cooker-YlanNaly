@@ -13,7 +13,10 @@ func main() {
 		displayMenu()
 
 		var choice int
-		fmt.Scanln(&choice)
+		_, err := fmt.Scanln(&choice)
+		if err != nil {
+			return
+		}
 
 		switch choice {
 		case 1:
@@ -30,7 +33,10 @@ func main() {
 			} else {
 				fmt.Println("Entrez les grammes de riz à ajouter :")
 				var input string
-				fmt.Scanln(&input)
+				_, err := fmt.Scanln(&input)
+				if err != nil {
+					return
+				}
 				grams, err := strconv.Atoi(input)
 				if err != nil {
 					fmt.Println("Entrée invalide. Veuillez entrer un nombre de grammes valide.")
@@ -44,7 +50,10 @@ func main() {
 			} else {
 				fmt.Println("Entrez les litres d'eau à ajouter :")
 				var input string
-				fmt.Scanln(&input)
+				_, err := fmt.Scanln(&input)
+				if err != nil {
+					return
+				}
 				liters, err := strconv.Atoi(input)
 				if err != nil {
 					fmt.Println("Entrée invalide. Veuillez entrer un nombre de litres valide.")
