@@ -8,7 +8,7 @@ This repository contains an algorithm for a virtual representation of a rice coo
 - To access the algorithm in a specific language, switch to the respective branch in this repository:
     - [RUST branch](link_to_RUST_branch_readme)
     - [Typescript branch](link_to_Typescript_branch_readme)
-    - [Scala branch](link_to_Scala_branch_readme)
+    - [Scala branch](https://github.com/hei-school/cc-d2-my-rice-cooker-YlanNaly/tree/feature/scala)
     - [Kotlin branch](https://github.com/hei-school/cc-d2-my-rice-cooker-YlanNaly/tree/feature/kotlin)
 
 Clone the repository:
